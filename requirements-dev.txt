@@ -1,0 +1,6 @@
+boto3
+pytest
+moto
+ruff
+checkov
+pre-commit
