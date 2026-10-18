@@ -7,5 +7,5 @@ environment = "dev"
 
 single_nat_gateway = true
 
-instance_type = "t3.mirco"
+instance_type = "t3.micro"
 
