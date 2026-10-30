@@ -27,3 +27,23 @@ output "instance_role_name" {
   description = "Name of the IAM role attached to the instance."
   value       = module.compute.aws_iam_role_name
 }
+
+output "log_bucket_arn" {
+  description = "ARN of the bucket, used in policies and as a flow log destination"
+  value       = module.storage.log_bucket_arn
+}
+
+output "log_bucket_id" {
+  description = "ID of the log Bucket."
+  value       = module.storage.log_bucket_id
+}
+
+output "backup_bucket_arn" {
+  description = "ARN of the backup bucket"
+  value       = module.storage.backup_bucket_arn
+}
+
+output "backup_bucket_id" {
+  description = "ID of the backup Bucket."
+  value       = module.storage.backup_bucket_id
+}

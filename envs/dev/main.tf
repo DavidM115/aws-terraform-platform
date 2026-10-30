@@ -20,3 +20,13 @@ module "compute" {
   instance_type     = var.instance_type
 
 }
+
+module "storage" {
+  source                           = "../../modules/storage"
+  project                          = var.project
+  environment                      = var.environment
+  vpc_id                           = module.network.vpc_id
+  enable_force_destroy             = var.force_destroy
+  log_retention_days               = var.log_retention_days
+  noncurrent_object_retention_days = var.noncurrent_object_retention_days
+}
